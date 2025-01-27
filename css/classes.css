@@ -1,8 +1,8 @@
 @import "./global/global.css"; /* Global */
 @import "./global/header.css"; /* Header */
+@import "./global/footer.css"; /* Footer */
 
 body {
-  height: 700vh;
   scroll-behavior: smooth;
 }
 
@@ -228,6 +228,11 @@ hr {
 #materiais {
   margin-left: 110px;
   margin-right: 110px;
+  margin-bottom: 200px;
+}
+
+.materiais {
+  margin-bottom: 100px;
 }
 
 table {

@@ -2,6 +2,7 @@ apliarImagem();
 carrossel();
 botoesGuia();
 linhaHorizontal();
+linksIndisponivel();
 
 function apliarImagem() {
   // Cria dinamicamente o overlay
@@ -76,6 +77,19 @@ function linhaHorizontal() {
       } else {
         step.classList.remove("active");
       }
+    });
+  });
+}
+
+function linksIndisponivel() {
+  // Seleciona todos os links com href contendo "#"
+  const links = document.querySelectorAll('a[href*="#"]');
+
+  // Torna os links "inclicáveis"
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Evita o comportamento padrão do clique
+      console.log(`Link inclicável: ${link.href}`);
     });
   });
 }
