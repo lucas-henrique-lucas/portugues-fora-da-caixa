@@ -14,6 +14,11 @@
     color: var(--cor-primaria);
 }
 
+::selection {
+    background-color: #393939;
+    color: #44d483;
+}
+
 a {
     text-decoration: none;
     display: inline-block;
@@ -31,6 +36,11 @@ img {
 
 ul {
     list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 /* Reutilizavel */
@@ -85,4 +95,18 @@ ul {
 
 .link-ativo {
     color: var(--cor-segundaria);
+}
+
+/* sessão visível e não visível */
+.plano_de_curso__conteudo {
+    display: none;
+  }
+
+.plano_de_curso__conteudo.aberta {
+    display: block;
+}
+
+.unidade__button.aberta {
+    background-color: #44d483;
+    color: #000;
 }
