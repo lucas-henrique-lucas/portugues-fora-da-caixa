@@ -129,12 +129,14 @@ body {
   background: var(--cor-segundaria);
 }
 
+.bibliografia > h2,
 .linha_do_tempo__conteudo > h2 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
+.bibliografia > h3,
 .linha_do_tempo__conteudo > h3 {
   font-size: 1.12rem;
   font-weight: 400;
@@ -142,6 +144,7 @@ body {
   margin-left: 10px;
 }
 
+.bibliografia > ul,
 .linha_do_tempo__conteudo > ul {
   display: flex;
   flex-direction: column;
@@ -149,6 +152,7 @@ body {
   margin-bottom: 20px;
 }
 
+.bibliografia > ul > li,
 .linha_do_tempo__conteudo > ul > li {
   font-size: 1rem;
   font-weight: 300;
@@ -203,15 +207,18 @@ hr {
   .step {
     padding-bottom: 30px;
   }
+  .bibliografia > h2,
   .linha_do_tempo__conteudo > h2 {
     font-size: 1.2rem;
   }
 
+  .bibliografia > h3,
   .linha_do_tempo__conteudo > h3 {
     font-size: 1rem;
     margin-left: 5px;
   }
 
+  .bibliografia > ul > li,
   .linha_do_tempo__conteudo > ul > li {
     font-size: 0.9rem;
     margin-left: 10px;
@@ -311,5 +318,39 @@ td:first-child {
 @media screen and (max-width: 700px) {
     #materiais {
         overflow: auto;
+    }
+}
+
+/* Bibliografia */
+#bibliografia {
+  margin-bottom: 150px;
+}
+
+.bibliografia {
+  margin-right: 110px;
+  margin-left: 110px;
+  margin-bottom: 100px;
+}
+
+.bibliografia > ul {
+  padding-bottom: 20px;
+}
+
+.bibliografia a {
+  color: var(--cor-segundaria);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  .bibliografia {
+      margin-left: 55px;
+      margin-right: 55px;
+    }
+}
+@media screen and (max-width: 900px) {
+  .bibliografia {
+      margin-left: 20px;
+      margin-right: 20px;
     }
 }
