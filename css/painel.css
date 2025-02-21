@@ -1,0 +1,214 @@
+@import "./global/global.css"; /* Global */
+
+/* Header */
+.info-caixa {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    position: relative;
+    background-color: #2e2542;
+}
+
+.info-texto {
+    position: absolute;
+    top: 15px;
+    left: 51.5%;
+    transform: translate(-59%, -50%);
+    z-index: 1;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.erro {
+    color: #f23d3d;
+}
+
+.sucesso {
+    color: #88e81a;
+}
+
+/* MAIN - Painel de Controle */
+#painel_de_controle {
+    padding: 30px 20px;
+}
+
+#form_upload {
+    margin-bottom: 80px;
+}
+
+#tabela {
+    overflow: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.campo_nome_do_arquivo,
+select,
+.nome-do-arquivo {
+    margin-bottom: 20px;
+}
+
+
+input[type=text] {
+    width: 100%;
+}
+
+.campo_nome_do_arquivo {
+    position: relative;
+}
+
+.nome__titulo {
+    position: absolute;
+    padding: 0 2px;
+    top: 17px;
+    left: 18px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+input[type=text]:focus ~ .nome__titulo {
+    top: -8px;
+    left: 10px;
+    font-size: 0.8rem;
+    background-color: #f8faff;
+}
+
+input[type=text], select {
+    font-size: 1rem;
+    padding: 5px 10px;
+    height: 50px;
+    outline: none;
+    background-color: #f8faff;
+    border: 2px solid #f3f3f3;
+    border-left: 3px solid #581ae8;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input[type=text]:focus, select:focus {
+    border-color: #581ae8;
+}
+
+input[type=text]:valid {
+    border-color: #581ae8;
+}
+
+input[type=text]:valid ~ .nome__titulo {
+    top: -8px;
+    left: 10px;
+    font-size: 0.8rem;
+    background-color: #f8faff;
+}
+
+.entrada-arquivo-escondida {
+  display: none;
+}
+
+.botao-adicionar-arquivo {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  cursor: pointer;
+  background-color: #f8faff;
+  box-shadow: 0px 4px 7px #00000014;
+  border: 1px solid #d8d9dd;
+  border-radius: 5px;
+  color: #581ae8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.botao-adicionar-arquivo > svg {
+  margin-right: 10px;
+}
+
+.nome-do-arquivo {
+  border-left: 3px solid #581ae8;
+  padding: 5px 10px;
+  height: 30px;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type=submit] {
+    align-self: flex-end;
+    cursor: pointer;
+    max-width: max-content;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    background-color: #2e2542;
+    color: #ccbdee;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 45px;
+}
+
+input[type=submit]:hover {
+    background-color: #5c4b81;
+}
+
+/* Tabela */
+#tabela {
+    overflow: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+    border-left: 3px solid #581ae8;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: 500;
+}
+
+.delete-button {
+  color: #fff;
+  background-color: #d9534f;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}

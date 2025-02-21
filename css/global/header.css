@@ -1,0 +1,139 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.header__logo {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.hamburger > span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  right: 110px;
+  width: 200px;
+  background-color: #f7f7f7;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 5px #302f2f2b;
+}
+
+.menu li {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  border-right: 1px solid;
+}
+
+.menu a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* Header - dropdown */
+.dropdown:hover .submenu {
+  display: none; /* Evita hover em todos os dispositivos */
+}
+
+.dropdown-icon {
+  width: 16px;
+}
+
+.submenu {
+  position: relative;
+  display: none;
+  width: 100%; /* Ajusta largura do submenu */
+}
+
+.submenu li {
+  padding: 10px 10px;
+  text-align: center;
+  border: none !important;
+}
+
+.submenu li ul {
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.submenu li h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.submenu li a {
+  font-size: 1rem;
+  text-transform: lowercase;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.submenu li a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  margin-right: 110px;
+  margin-left: 110px;
+}
+
+@media screen and (max-width: 1200px) {
+  #header {
+    margin-right: 55px;
+    margin-left: 55px;
+  }
+  .menu {
+    right: 55px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #header {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .menu {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    right: 0;
+    width: 100%;
+  }
+  .menu li {
+    text-align: left;
+    border-right: none;
+    border-left: 1px solid;
+  }
+
+  .submenu li {
+    text-align: inherit;
+  }
+}

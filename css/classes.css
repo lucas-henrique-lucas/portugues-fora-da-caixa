@@ -1,0 +1,356 @@
+@import "./global/global.css"; /* Global */
+@import "./global/header.css"; /* Header */
+@import "./global/footer.css"; /* Footer */
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  margin-bottom: 100px;
+}
+
+/* Apresentação */
+#apresentacao {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-bottom: 150px;
+}
+
+.apresentacao__titulo {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.apresentacao__titulo > span {
+  background-color: #393939;
+  color: #fff;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #apresentacao {
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #apresentacao {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .apresentacao__titulo {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .apresentacao__titulo > span {
+    display: block;
+    max-width: max-content;
+  }
+}
+
+/* Plano de Curso */
+.plano_de_curso {
+  margin-bottom: 100px;
+}
+
+#plano_de_curso {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-bottom: 100px;
+}
+
+.plano_de_curso__unidade {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.unidade__button {
+  background-color: #e9e9e9;
+  color: #393939;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+
+.unidade__button:hover {
+  background-color: #44d483;
+  color: #393939;
+}
+
+.plano_de_curso__unidade {
+  margin-bottom: 100px;
+}
+
+.plano_de_curso__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.plano_de_curso__titulo > span {
+  font-weight: 300;
+  text-transform: none;
+}
+
+.linha_do_tempo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #555;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.step.active .circle {
+  background: var(--cor-segundaria);
+}
+
+.bibliografia > h2,
+.linha_do_tempo__conteudo > h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.bibliografia > h3,
+.linha_do_tempo__conteudo > h3 {
+  font-size: 1.12rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.bibliografia > ul,
+.linha_do_tempo__conteudo > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bibliografia > ul > li,
+.linha_do_tempo__conteudo > ul > li {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left: 20px;
+  max-width: 500px;
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #393939;
+  z-index: -1;
+}
+
+.step.active::after {
+  background: var(--cor-segundaria);
+}
+
+/* reutilizavel */
+hr {
+  height: 3px;
+  max-width: 600px;
+  background: #000;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  #plano_de_curso {
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #plano_de_curso {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .plano_de_curso__unidade {
+    flex-direction: column;
+  }
+  .unidade__button {
+    padding: 10px 10px;
+  }
+  .step {
+    padding-bottom: 30px;
+  }
+  .bibliografia > h2,
+  .linha_do_tempo__conteudo > h2 {
+    font-size: 1.2rem;
+  }
+
+  .bibliografia > h3,
+  .linha_do_tempo__conteudo > h3 {
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+
+  .bibliografia > ul > li,
+  .linha_do_tempo__conteudo > ul > li {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  .circle {
+    display: none;
+  }
+  .step::after {
+    left: -11px;
+  }
+}
+
+/* Materiais */
+#materiais {
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-bottom: 200px;
+}
+
+.materiais {
+  margin-bottom: 100px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  min-width: 600px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #e6e5e5;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+
+td {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+td:first-child {
+  font-weight: 700;
+}
+
+.tipo {
+  display: flex;
+  padding: 5px 10px;
+  background-color: #393939;
+  justify-content: center;
+  width: 100px;
+  margin: auto;
+  font-weight: 700;
+}
+
+.pdf {
+  color: #fc6565;
+}
+
+.word {
+  color: #9265fc;
+}
+
+.img {
+  color: #9ffc65;
+}
+
+.baixar {
+  color: var(--cor-segundaria);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.baixar:hover {
+  color: #44d483;
+}
+
+@media screen and (max-width: 1200px) {
+    #materiais {
+        margin-left: 55px;
+        margin-right: 55px;
+      }
+}
+@media screen and (max-width: 900px) {
+    #materiais {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+}
+@media screen and (max-width: 700px) {
+    #materiais {
+        overflow: auto;
+    }
+}
+
+/* Bibliografia */
+#bibliografia {
+  margin-bottom: 150px;
+}
+
+.bibliografia {
+  margin-right: 110px;
+  margin-left: 110px;
+  margin-bottom: 100px;
+}
+
+.bibliografia > ul {
+  padding-bottom: 20px;
+}
+
+.bibliografia a {
+  color: var(--cor-segundaria);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  .bibliografia {
+      margin-left: 55px;
+      margin-right: 55px;
+    }
+}
+@media screen and (max-width: 900px) {
+  .bibliografia {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+}
